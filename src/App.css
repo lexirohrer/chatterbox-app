@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/* MOBILE */
+html{
+  font-size:14px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* TABLET */
+@media only screen and (min-width: 480px) {
+  html{
+      font-size:16px;
+  }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+  html{
+      font-size:18px;
+  }
+}
+/* X-LARGE */
+@media only screen and (min-width: 1024px) {
+  html{
+      font-size:20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  text-align: left;
+  background: #67b26f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #67b26f, #4ca2cd); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #67b26f, #4ca2cd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  width: 100vw;
+  height: 2rem;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: .5rem;
+  background:rgba(255, 255, 255, 0.6);
+  font-size: 1rem;  
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+  height:1.8rem;
+  width:1.8rem;
+  margin-right:10px;
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/66eeaa6e-ac89-4c10-85e6-b597ffed3717/ddbyr6k-5b5ce5ef-8c84-44d1-b1fc-b29b4e2b60a4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNjZlZWFhNmUtYWM4OS00YzEwLTg1ZTYtYjU5N2ZmZWQzNzE3XC9kZGJ5cjZrLTViNWNlNWVmLThjODQtNDRkMS1iMWZjLWIyOWI0ZTJiNjBhNC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.zCg-oG-cE8AoQGZmTrB1-3uAQrpbTwlIftrPwNkqHZU);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
