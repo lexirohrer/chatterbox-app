@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import './App.css';
 
 function TextInput(props){
     const [text, setText] = useState(' ')
@@ -6,7 +7,7 @@ function TextInput(props){
     function sendMessage(){
         if (text===''){return}
         props.send(text)
-        setText(' ')
+        setText('')
     }
 
     function keyPressed(e){
@@ -15,17 +16,20 @@ function TextInput(props){
         }
     }
     
-    return <footer className="text-input">
-    <input 
-    placeholder="write your message"
-    value={text}
-    onChange={e=> setText(e.target.value)}
-    onKeyPress= {keyPressed}
-    />
-    <button
-        onClick={sendMessage}
-    >
-        SEND</button>
+    return <footer className="footer">
+
+    <div className="input">
+        <input className="text-input"
+        placeholder="write your message"
+        value={text}
+        onChange={e=> setText(e.target.value)}
+        onKeyPress= {keyPressed}
+        />
+        <button className ="button"
+            onClick={sendMessage}
+        >
+        </button>
+    </div>
     </footer>
 
 }

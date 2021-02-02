@@ -23,14 +23,14 @@ html{
 
 .App {
   text-align: left;
-  background: #67b26f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #67b26f, #4ca2cd); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #67b26f, #4ca2cd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #16222A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .header {
@@ -42,6 +42,7 @@ html{
   background:rgba(255, 255, 255, 0.6);
   font-size: 1rem;  
   font-weight: bold;
+  border-bottom: .1rem solid white;
 }
 
 .logo{
@@ -54,3 +55,82 @@ html{
   background-size:cover;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 4rem;
+  width: 100%;
+  background:rgba(255, 255, 255, 0.4);
+  border-top: .1rem solid white;
+  text-align: center;
+  display:flex;
+  flex-direction:row;
+  padding:2px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*div that contains both text input and button*/
+/* .input{
+  flex-grow: 2;
+  border-radius: 2rem;
+  margin: .2rem .2rem;
+  background-color:mintcream;
+  border: 1rem mintcream;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/*the actual input field*/
+.text-input{
+  position: absolute;
+  right:5rem;
+  top:0.5rem;
+  height:3rem;
+  width: 85%;
+  /* width: 94.2%; */
+  /* flex-grow: 2; */
+  border-radius: 2rem;
+  border: none;
+  /* padding-left:10px; */
+  padding: .2rem 1.5rem;
+  font-size: 1rem;
+  outline:none;
+  /* display:flex; */
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+}
+
+.button{
+  position: absolute;
+  right:0.65rem;
+  top:0.6rem;
+  width: 3.2rem;
+  height:3.2rem;
+  border-radius: 100%;
+  border:none;
+  border-radius: 2rem;
+  background-color: white;
+  outline: none;
+  background-image: url(./up-arrow.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+.message{
+  width: fit-content;
+  padding: 1rem;
+  margin: 1rem; 
+  height: 25px;
+  border: none;
+  border-radius: 2rem; 
+  background-color: #16222A;
+  color: white;
+  display: flex;
+  align-items: center;
+}
