@@ -33,10 +33,17 @@ html{
   justify-content: flex-start;
 }
 
+.logo-and-title{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
 .header {
   width: 100vw;
   height: 2rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: .5rem;
   background:rgba(255, 255, 255, 0.6);
@@ -56,7 +63,7 @@ html{
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   height: 4rem;
@@ -70,6 +77,8 @@ html{
   justify-content: center;
   align-items: center;
 }
+
+
 
 /*div that contains both text input and button*/
 /* .input{
@@ -123,9 +132,10 @@ html{
 
 
 .message{
+  position: relative;
   width: fit-content;
   padding: 1rem;
-  margin: 1rem; 
+  margin: .5rem; 
   height: 25px;
   border: none;
   border-radius: 2rem; 
@@ -133,4 +143,40 @@ html{
   color: white;
   display: flex;
   align-items: center;
+}
+
+.messages{
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  flex: 1;
+  overflow: auto;
+}
+
+.message-name{
+  position: absolute;
+  top: -.8rem;
+  left: 10px;
+  font-size: .6rem;
+  color:white;
+  font-weight: bold;
+}
+
+.name-picker{
+  display: flex;
+  flex-direction: row;
+  margin-right: 2rem;
+  align-items: center;
+}
+.name-picker input{
+border: none;
+border-radius: 2rem;
+margin: .5rem;
+height: 1.5rem;  
+}
+.name-picker button{
+height: 1.5rem;
+align-items: center;
+background:none;
+border: none;
 }
